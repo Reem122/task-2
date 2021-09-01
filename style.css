@@ -174,7 +174,7 @@ p{
 }
 #statistics .container .row{
     display: grid;
-    grid-gap: 60px;
+    grid-gap: 50px;
     grid-template-columns: 130px;
 }
 #statistics .col{
