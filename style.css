@@ -175,7 +175,7 @@ p{
 #statistics .container .row{
     display: grid;
     grid-gap: 60px;
-    grid-template-columns: 120px;
+    grid-template-columns: 130px;
 }
 #statistics .col{
     text-align: center;
