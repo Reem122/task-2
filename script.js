@@ -51,8 +51,8 @@ function loopCodes(){
 window.onscroll = function(){
     if(window.scrollY >= 330){
         loopProjects();
-        loopCustomers()
-        loopHours()
-        loopCodes()
+        loopCustomers();
+        loopHours();
+        loopCodes();
     }
 }
