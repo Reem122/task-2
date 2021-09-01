@@ -1,0 +1,249 @@
+/* X-Small devices (portrait phones, less than 576px) */
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7;
+}
+#onload{
+    display: none;
+}
+
+/* preload */
+#preload{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#preload div div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    margin: 10px;
+}
+#preload div div div{
+    background-color: #80b235;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin: 4px;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#preload div div div:nth-child(1){
+    animation-name: zooming-1;
+}
+#preload div div div:nth-child(2){
+    animation-name: zooming-2;
+    animation-delay: 0.25s;
+}
+#preload div div div:nth-child(3){
+    animation-name: zooming-1;
+    animation-delay: 0.5S;
+}
+@keyframes zooming-1 {
+    0%{
+        height: 12px;
+        width: 12px;
+    }
+    100%{
+        height: 20px;
+        width: 20px;
+    }
+}
+@keyframes zooming-2 {
+    0%{
+        height: 12px;
+        width: 12px;
+    }
+    100%{
+        height: 20px;
+        width: 20px;
+    }
+}
+@keyframes zooming-3 {
+    0%{
+        height: 12px;
+        width: 12px;
+    }
+    100%{
+        height: 20px;
+        width: 20px;
+    }
+}
+#preload p{
+    text-align: center;
+    font-size: 16px;
+    color: #292d2c;
+}
+/* preload */
+
+/* services */
+#our-services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 30px;
+}
+h1, h2{
+    text-transform: capitalize;
+}
+h1{
+    color: #2c3834;
+    font-size: 30px;
+    margin: 0 0 10px 0;
+}
+.hr{
+    background-color: #dfdfdf;
+    height: 2px;
+    width: 140px;
+    border: none;
+    margin: 0 auto 20px;
+}
+.hr::after{
+    content: "";
+    background-color: #80b235;
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 5px;
+    width: 75px;
+    margin: auto;
+}
+small{
+    color: #292d2c;
+    display: block;
+    width: 90%;
+    margin: 0 auto 30px;
+}
+h1, small{
+    text-align: center;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#our-services .col{
+    background-color: white;
+    width: 100%;
+    height: 220px;
+    padding: 10px;
+    margin: 10px;
+}
+.fa-parent{
+    color: white;
+    font-size: 25px;
+    background-color: #80b235;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p{
+    font-size: 14px;
+}
+/* services */
+
+/* statistics */
+#statistics{
+    background: url(background1.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+#statistics .container{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 60px;
+}
+#statistics .container .row{
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: 120px;
+}
+#statistics .col{
+    text-align: center;
+}
+.number{
+    font-size: 30px;
+    font-weight: bold;
+}
+/* statistics */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+    /* services */
+    small{
+        width: 350px;
+    }
+    #our-services .container{
+        display: flex;
+    }
+    #our-services .row:nth-child(1){
+        justify-content: flex-end;
+    }
+    #our-services .row:nth-child(2){
+        justify-content: flex-start;
+    }    
+    #our-services .col{
+        min-width: 230px;
+        width: 25%;
+    }
+    /* services */
+
+    /* statistics */
+    #statistics .container .row{
+        grid-gap: 60px 80px;
+        grid-template-columns: 120px 120px;
+    }
+    /* statistics */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    /* statistics */
+    #statistics .container .row{
+        grid-gap: 60px 120px;
+    }
+    /* statistics */
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+    /* services */
+    #our-services .container{
+        display: block;
+    }
+    #our-services .container .row{
+        justify-content: center;
+    }
+    /* services */
+
+    /* statistics */
+    #statistics .container .row{
+        grid-gap: 60px;
+        grid-template-columns: 120px 120px 120px 120px;
+    }
+    /* statistics */
+
+}
